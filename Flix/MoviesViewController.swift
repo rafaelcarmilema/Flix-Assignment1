@@ -62,5 +62,15 @@ class MoviesViewController: UIViewController, UITableViewDataSource,UITableViewD
         cell.synopsisLabel.text = overview
         return cell
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell // get the cell that was tapped
+        let indexPath = tableView.indexPath(for: cell)! // get the index of the cell tapped
+        let movie = movies[indexPath.row]
+        print(movie)
+        
+        let detailsViewController = segue.destination as! MovieDetailsViewController
+        detailsViewController.movie = movie
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
