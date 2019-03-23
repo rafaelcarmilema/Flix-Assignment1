@@ -182,9 +182,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nIL-pO-JcZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nIL-pO-JcZ">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Mu-6y-mt9">
                                     <size key="itemSize" width="177" height="218"/>
@@ -200,12 +199,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="177" height="218"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-8w-eeT">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWf-8w-eeT">
                                                     <rect key="frame" x="0.0" y="0.0" width="177" height="218"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eWf-8w-eeT" secondAttribute="bottom" id="HAL-Nd-JHN"/>
+                                            <constraint firstAttribute="trailing" secondItem="eWf-8w-eeT" secondAttribute="trailing" id="MVK-go-gHg"/>
+                                            <constraint firstItem="eWf-8w-eeT" firstAttribute="leading" secondItem="KwT-sP-2vD" secondAttribute="leading" id="kH9-JX-47V"/>
+                                            <constraint firstItem="eWf-8w-eeT" firstAttribute="top" secondItem="KwT-sP-2vD" secondAttribute="top" id="pxY-ay-Odi"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="posterView" destination="eWf-8w-eeT" id="Znb-iF-9j9"/>
                                         </connections>
@@ -213,6 +217,12 @@
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="nIL-pO-JcZ" firstAttribute="bottom" secondItem="FeS-i3-hdS" secondAttribute="bottom" id="Bfs-Vb-mFR"/>
+                            <constraint firstItem="nIL-pO-JcZ" firstAttribute="trailing" secondItem="FeS-i3-hdS" secondAttribute="trailing" id="VLB-jm-JsL"/>
+                            <constraint firstItem="nIL-pO-JcZ" firstAttribute="top" secondItem="FeS-i3-hdS" secondAttribute="top" id="nvy-I2-EEe"/>
+                            <constraint firstItem="nIL-pO-JcZ" firstAttribute="leading" secondItem="FeS-i3-hdS" secondAttribute="leading" id="pNH-an-fY7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FeS-i3-hdS"/>
                     </view>
                     <navigationItem key="navigationItem" id="NH0-hG-jNC"/>
